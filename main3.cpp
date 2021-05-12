@@ -65,11 +65,11 @@ void loop(){
     verticalUltraSonic();
     verticalOperation();
     Serial.println(distance0);
-   // Serial.print("  ");
-    //horizontalUltraSonic();
-    //horizontalOperation();
-    //Serial.println(distance1);
-   // Serial.println("Access Authorized.");
+    Serial.print("  ");
+    horizontalUltraSonic();
+    horizontalOperation();
+    Serial.println(distance1);
+    Serial.println("Access Authorized.");
     }
   }
 
@@ -166,7 +166,7 @@ int verticalOperation(){
   }
 
 
-/*int horizontalUltraSonic(){
+int horizontalUltraSonic(){
   digitalWrite(trigPin1, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin1, HIGH);
@@ -175,13 +175,13 @@ int verticalOperation(){
   duration1=pulseIn(echoPin1,HIGH);
   distance1=(duration1*0.034)/2;
   return distance1;
-  }*/
+  }
 
-/*int horizontalOperation(){
+int horizontalOperation(){
   if(distance2<=15){
     digitalWrite(IN1andIN3, HIGH);
     digitalWrite(IN2andIN4, LOW);
     analogWrite(ENA_A, 255);
     Serial.println("Moving Forward");
     }
-  }*/
+  }
